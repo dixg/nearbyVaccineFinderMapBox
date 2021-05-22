@@ -5,9 +5,7 @@ import * as mapboxgl from "mapbox-gl";
 import { geojson } from "./helper";
 import "./map.css";
 
-mapboxgl.accessToken =
-  "pk.eyJ1IjoiZGl4ZyIsImEiOiJja29xOTljZm0wYzAxMzBuMjBzaHByejZiIn0.7eezL2jojhxzqEb8-qmMbQ";
-
+mapboxgl.accessToken ={mapbox_access_token}
 class App extends Component {
   map;
 
@@ -26,7 +24,7 @@ class App extends Component {
 
     this.map = new mapboxgl.Map({
       container: "map",
-      style: "mapbox://styles/dixg/ckoxaoh681dmd18k8cdfbyxm8",
+      style: {mapstyle_url},
       center: [77.2137944, 28.535326],
       zoom: 5,
     });
